@@ -1,4 +1,2 @@
 # Vuetify-OCR-API
-repo to track changes in project
- pullpwd
- 
+Mini feature to test DocuPanda API written in javascript
