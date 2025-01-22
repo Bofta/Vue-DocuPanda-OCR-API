@@ -13,8 +13,6 @@ const url = "https://app.docupanda.io/document";
 
 
 // Metodo 3 : usando un pdf pubblico ( già pubblicato sul web come caso d'uso reale )
-const url_pdf_pubblicato = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
 
 // Read and encode the file in base64
 const filePath = "example_document.pdf";
@@ -25,7 +23,6 @@ const base64Content = Buffer.from(fileContents).toString('base64');
 const payload = {
     document: {
         file: {
-            url: url_pdf_pubblicato,
             contents: base64Content,
             filename: filePath
         }

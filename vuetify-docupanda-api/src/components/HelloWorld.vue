@@ -72,7 +72,7 @@
 <p class="p1">3 - POST a standardize request, that gets a document ID, as well as a schema, and generates a structured JSON </p>
 <br><br>
 
-<p class="p1"> To start pleace upload a document PDF FILE :  </p>
+
 
 
 
