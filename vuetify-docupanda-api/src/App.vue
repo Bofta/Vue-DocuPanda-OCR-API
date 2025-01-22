@@ -32,29 +32,40 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Latest Release Iam in vue.app file</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
       <HelloWorld/>
+      <documentPost/>
+     
     </v-main>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import documentPost from './components/documentPost'
+// import postingDocument from './postingDocument.js';
+
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    documentPost
   },
 
   data: () => ({
     //
   }),
+
+  methods: {
+  }
 };
 </script>
+
+/* eslint-disable */

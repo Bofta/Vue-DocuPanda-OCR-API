@@ -19,7 +19,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Testing DocuPanda API
+          Testing DocuPanda API | We finish When We Are Done
         </h1>
 
 
@@ -74,13 +74,7 @@
 
 <p class="p1"> To start pleace upload a document PDF FILE :  </p>
 
-<v-btn
-  color="blue"
-  class="white--text"
-  @click="uploadFile"
->
-  Upload File
-</v-btn>
+
 
 
 
@@ -146,9 +140,6 @@
           href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
         },
       ],
-      uploadFile() {
-      this.$refs.fileInput.click();
-    },
     }),
   }
 </script>
@@ -162,9 +153,4 @@
     transform: scale(0.9);
   }
 
-  .p1 {
-    text-align: justify;
-    
-  }
-
-  </style>
+</style>

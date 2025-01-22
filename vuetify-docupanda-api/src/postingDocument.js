@@ -1,9 +1,20 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-
+        
+   
 // Replace with your actual DocuPanda API key
 const api_key = "qppytf7F6fhj45mWLZaOKR36oHL2";
 const url = "https://app.docupanda.io/document";
+
+
+// Metodo 1 : client side ( Componente Vue con uploader ) -> usando un uploader in un compenente vue in modo tale che si riesce ad accedere al fs ( file system )
+
+// Metodo 2 : server side ( Node.js ) -> http request di tipo POST communicando direttamente con il API del servizio web richiesto.
+
+
+// Metodo 3 : usando un pdf pubblico ( già pubblicato sul web come caso d'uso reale )
+const url_pdf_pubblicato = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+
 
 // Read and encode the file in base64
 const filePath = "example_document.pdf";
@@ -14,6 +25,7 @@ const base64Content = Buffer.from(fileContents).toString('base64');
 const payload = {
     document: {
         file: {
+            url: url_pdf_pubblicato,
             contents: base64Content,
             filename: filePath
         }
@@ -36,3 +48,5 @@ fetch(url, {
     console.log(document_id); // Output the document ID
 })
 .catch(error => console.error('Error:', error));
+
+
