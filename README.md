@@ -1,2 +1,2 @@
 # Vuetify-OCR-API
-Mini feature to test DocuPanda API written in javascript
+Prova Integrazione API DocuPanda in JS ad un altro applicativo
