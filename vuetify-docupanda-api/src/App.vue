@@ -50,7 +50,6 @@ import HelloWorld from './components/HelloWorld';
 import documentPost from './components/documentPost'
 // import postingDocument from './postingDocument.js';
 
-
 export default {
   name: 'App',
 

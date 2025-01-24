@@ -1,28 +1,46 @@
-// Compenente vue che gestice il file upload e fa una richiesta HTTP POST al API di DocuPanda
 <template>
-
-<v-file-input label="File input" @change="previewFiles" multiple> Upload PDF </v-file-input>
-    
-</template>
-
-// Script Section
-<script>
-export default {
-    name: 'documentPost',
-    data: () => ({
-            msg: 'Hello',
-        }),
+    <div>
+      <input type="file" @change="handleFileUpload" />
+      <button @click="submitFile">Upload</button>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        selectedFile: null, // To store the selected file
+      };
+    },
     methods: {
-            // methods ( declari metodi lahne )
-            previewFiles() {
-                console.log(event.target.files);
-            }
-        },
-    }
-
-</script>
-
-
+      handleFileUpload(event) {
+        this.selectedFile = event.target.files[0]; // Capture the uploaded file
+      },
+      submitFile() {
+        if (!this.selectedFile) {
+          alert("No file selected!");
+          return;
+        }
+  
+        // Example: Sending the file to a server
+        const formData = new FormData();
+        formData.append("file", this.selectedFile);
+  
+        fetch("https://example.com/upload", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("File uploaded successfully:", data);
+          })
+          .catch((error) => {
+            console.error("Error uploading file:", error);
+          });
+      },
+    },
+  };
+  </script>
 
 // Styling Section
 <style>

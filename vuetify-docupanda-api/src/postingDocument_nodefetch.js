@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
-        
    
 // Replace with your actual DocuPanda API key
 const api_key = "qppytf7F6fhj45mWLZaOKR36oHL2";
